@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7141103.svg)](https://doi.org/10.5281/zenodo.7141103) 
+[![DOI](https://zenodo.org/badge/546884622.svg)](https://zenodo.org/badge/latestdoi/546884622)
 
 Version: 1.0.0
 Authors:
