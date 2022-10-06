@@ -7,7 +7,7 @@ setup(
     description='Flood detection model',
     tests_require=['pytest'],
     author='Nelluru, Dedeepya',
-    author_email='dnellur@ncsu.edu',
+    author_email='dnellur2022@gmail.com',
     url='https://github.com/dnellur4/flood_detection_model',
     python_requires='>=3.7',
     classifiers=[
