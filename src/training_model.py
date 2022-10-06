@@ -88,3 +88,39 @@ svm_y_pred = svm.predict(X_test)
 svm_report = classification_report(y_test, svm_y_pred, target_names=['not flooded', 'flooded'])
 
 print('SVM Model classification report is: \n', svm_report)
+
+#Fine tuning the model using GridSearch
+from sklearn.model_selection import GridSearchCV
+ 
+# defining parameter range
+param_grid = {'C': [0.1, 1, 10, 100, 1000],
+              'gamma': [2, 1, 0.1, 0.01, 0.001, 0.0001],
+              'kernel': ['rbf', 'linear']}
+ 
+svm_grid = GridSearchCV(SVC(), param_grid, refit = True, verbose = 3)
+ 
+# fitting the model for grid search
+svm_grid.fit(X_train, y_train)
+
+# print how our model looks after hyper-parameter tuning
+print(svm_grid.best_estimator_)
+
+
+#Fine-tuned Model
+# C=1, gamma=0.001, kernel=rbf, score=0.795, total=  37.6s
+from sklearn.svm import SVC
+svm = SVC(kernel='rbf', C=1, gamma=0.001)
+
+svm.fit(X_train, y_train)
+
+
+#Evaluation of the fine-tuned model
+from sklearn.metrics import classification_report
+
+#predict response using SVM
+svm_y_pred = svm.predict(X_test)
+
+# calculate report for svm model
+svm_report = classification_report(y_test, svm_y_pred, target_names=['not flooded', 'flooded'])
+
+print('SVM Model classification report is: \n', svm_report)
