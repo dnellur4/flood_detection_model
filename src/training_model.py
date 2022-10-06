@@ -16,7 +16,7 @@ with open(json_filename) as json_file:
     data = json.load(json_file)
 
 required_columns = ['description', 'user_tags', 'image_id', 'title']
-json_df = pd.DataFrame(data['images'], columns = required_columns1)
+json_df = pd.DataFrame(data['images'], columns = required_columns)
 print(json_df.head())
 #merge label and json dataframes
 train_df = pd.merge(train_df, json_df, how='inner')
