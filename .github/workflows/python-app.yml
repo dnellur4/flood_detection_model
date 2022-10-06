@@ -5,7 +5,13 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - Ratan
+      - Ravi_teja
+      - sai_kumar
+      - vardhani
+      - dedeepya
   pull_request:
     branches: [ "main" ]
 
