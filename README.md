@@ -11,6 +11,7 @@
 ![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
 [![GitHub issues](https://img.shields.io/github/issues/dnellur4/flood_detection_model)](https://github.com/dnellur4/flood_detection_model/issues?q=is%3Aissue+is%3Aopen)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/dnellur4/flood_detection_model)](https://github.com/dnellur4/flood_detection_model/issues?q=is%3Aissue+is%3Aclosed)
+  </br>
 [![Repo Size](https://img.shields.io/github/repo-size/dnellur4/flood_detection_model?color=brightgreen)](https://github.com/dnellur4/flood_detection_model.git)
 [![contributors](https://img.shields.io/github/contributors/dnellur4/flood_detection_model)](https://github.com/dnellur4/flood_detection_model/graphs/contributors)
 [![commit-activity](https://img.shields.io/github/commit-activity/w/dnellur4/flood_detection_model?color=blue)](https://github.com/dnellur4/flood_detection_model/graphs/commit-activity)
@@ -27,16 +28,11 @@
   ::
   <a href="#description">Description</a>
   ::
-  <a href="#features">Features</a>
-  ::
   <a href="#directory-structure">Directory Structure</a>
   ::
   <a href="#technologies">Technologies</a>
   ::
-  <a href="#software-requirement">Software Requirement</a>
-  ::
-  <a href="#instructions-to-execute">Instructions to execute</a>
-  ::
+  <a href="#gettingstarted">Getting started</a> </br>
   <a href="#results">Results</a>
   ::
   <a href="#conclusion">Conclusion</a>
@@ -56,7 +52,6 @@ Social media has emerged as a source of quick communication and information. Thi
 ## Description
 
 
-## Features
 ## Directory Structure 
 
 ```txt
@@ -102,18 +97,61 @@ setup.py
 ```
 ## Technologies
 
-![Jupyter notebook](https://img.shields.io/badge/jupyternotebook-%2320232a.svg?style=for-the-badge&logo=jupyternotebook&logoColor=%2361DAFB) &nbsp; ![Python](https://img.shields.io/badge/python-%2320232a.svg?style=for-the-badge&logo=python&logoColor=%2361DAFB) &nbsp; ![HTML](https://img.shields.io/badge/html-%2320232a.svg?style=for-the-badge&logo=html&logoColor=%2361DAFB) &nbsp; ![CSS](https://img.shields.io/badge/css-%2320232a.svg?style=for-the-badge&logo=css&logoColor=%2361DAFB) &nbsp; ![Javascript](https://img.shields.io/badge/javascript-%2320232a.svg?style=for-the-badge&logo=javascript&logoColor=%2361DAFB) 
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="20" height="20"/> Python </br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Java script" width="20" height="20"/> Java Script </br>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="html" width="20" height="20"> CSS3 </br>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="css" width="20" height="20">  HTML 5 </br>
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" width="20" height="20"> Jupyter Notebook</br>
 
-## Software requirement
-## Instructions to execute
+## Gettingstarted
+
+  - ### Prerequisite:
+      - Download [Python3.x](https://www.python.org/downloads/).
+
+   - ### Installation:
+
+      **Steps to setup virtual environment**
+     - Create a virtual environment:
+
+        `python3.8 -m venv app_env`
+    
+     - Activate the virtual environment: 
+
+        `source app_env/bin/activate`
+    
+     - Build the dependencies in virtual environment:
+
+        `pip install -r requirements.txt`
+
+  - ### Instructions to Run the application.
+
+     **To run/test the site:**
+
+     - Clone [Flooddetection github repo](https://github.com/dnellur4/flood_detection_model).
+
+     - Navigate to [project directory](./).
+  
+     - Run `python3 App.py`
+
+     - Site will be hosted at:(localhost)
+       `http://127.0.0.1:3000/`
+
 ## Results
-![alt text](https://raw.githubusercontent.com/dnellur4/flood_detection_model/vardhani/test/Results/Home.png)
+ ![alt text](https://github.com/dnellur4/flood_detection_model/blob/main/test/Web%20Results/home.png)
+ ![alt text](https://github.com/dnellur4/flood_detection_model/blob/main/test/Web%20Results/login.png)
+ ![alt text](https://github.com/dnellur4/flood_detection_model/blob/main/test/Web%20Results/output_prediction.png)
 ## Conclusion
+  - Our Current Application takes post tile and description as Input.
+  - We trained our model using BERT + SVM machinelearning model.
+  - Depending on the inputs our trained machine learning model predicts the outcome whether the flood exists or not.
 ## Future scope
+  - This application can be used as an extension to a social media app.
+  - Predicting the flood using  current text analysis can be extended to images in the social media posts.
+  - As the trained data is limited in our application. It can be improved by building the model with more data.
 
 
+## Video
 
-## Video Link
 ## Group Members ##
   - [Nelluru, Dedeepya](mailto:dnellur@ncsu.edu?) (dnellur)
   - [Kanamarlapudi, Venkata Gnana Vardhani](mailto:vkanama@ncsu.edu?) (vkanama)
