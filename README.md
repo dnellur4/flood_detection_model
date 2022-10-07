@@ -55,6 +55,7 @@ Social media has emerged as a source of quick communication and information. Thi
 
 ## Description
 
+Nowadays, a significant number of individuals use cellphones and write about their daily lives on social media.  The analysis of this immense amount of social media data has the potential to significantly improve response times in the event of a natural disaster. The project's objective is to identify floods from a given text which is associated social media metadata. We intend to put into practice a model for flood detection that makes use of the metadata. In order to create an effective model as part of the fusion, we would like to investigate various 12 Natural Language Processing techniques for feature extraction from the social media information.
 
 ## Features
 ## Directory Structure 
