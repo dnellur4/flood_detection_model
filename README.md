@@ -1,4 +1,4 @@
-<p align="center"><img src="/images/ProjectBanner.png"></p>
+<p align="center"><img src="/header.png"></p>
 
 <h1 align="center"> Flood detection from social media text </h1>
 
