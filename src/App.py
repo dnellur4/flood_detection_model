@@ -4,23 +4,25 @@ from pickle import GET
 import flask
 from requests import request
 from sklearn.svm import SVC
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
 
-#filename = '/Users/VKANAMA/Downloads/deep_model.sav'
-filename = 'deep_model.sav'
-if not os.path.exists(filename):
+# @app.route('/',methods= ['GET','POST'])
+# def helloworld():
+#     return render_template('index.html')
+
+filename = '/Users/VKANAMA/Downloads/deep_model.sav'
+'''if not os.path.exists(filename):
     print(1)
-    os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
+    os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")'''
 loaded_model = pickle.load(open(filename, 'rb'))
 
 #loading the model
-#filename = '/Users/VKANAMA/Downloads/svm_model.sav'
-filename = 'svm_model.sav'
-if not os.path.exists(filename):
-    os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
+filename = '/Users/VKANAMA/Downloads/svm_model.sav'
+'''if not os.path.exists(filename):
+    os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")'''
 svm_model = pickle.load(open(filename, 'rb'))
 
 flask_app = flask.Flask(__name__)
@@ -37,6 +39,8 @@ def Home():
 @flask_app.route("/predict", methods = ['POST','GET'])
 def predict():
     #loading the tokenizer
+    res = ''
+    description=''
     if flask.request.method == 'POST':
         ptext= flask.request.form.get('post_text')
         print(ptext)
@@ -67,3 +71,4 @@ def return_app():
 
 if __name__ == '__main__':
     flask_app.run(port =3000, debug =True)
+    
