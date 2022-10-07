@@ -37,6 +37,8 @@ def Home():
 @flask_app.route("/predict", methods = ['POST','GET'])
 def predict():
     #loading the tokenizer
+    res = ''
+    description=''
     if flask.request.method == 'POST':
         ptext= flask.request.form.get('post_text')
         print(ptext)
@@ -61,6 +63,9 @@ def predict():
 @flask_app.route("/login_socialmedia", methods = ['POST','GET'])
 def login_socialmedia():
     return flask.render_template("login_socialmedia.html")
+
+def return_app():
+    return(flask_app)
 
 if __name__ == '__main__':
     flask_app.run(port =3000, debug =True)
