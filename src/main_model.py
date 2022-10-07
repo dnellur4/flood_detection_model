@@ -5,8 +5,7 @@ import os
 import argparse
 
 class prediction():
-    def predict_flood(self, description, title):
-        #loading the tokenizer
+    def get_model(self):
         filename = 'deep_model.sav'
         if not os.path.exists(filename):
             os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
@@ -17,6 +16,9 @@ class prediction():
         if not os.path.exists(filename):
             os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
         svm_model = pickle.load(open(filename, 'rb'))
+        return loaded_model,svm_model
+    def predict_flood(self, description, title):
+        loaded_model,svm_model = self.get_model()
 
         input_txt = loaded_model.encode(description)
         input_title = loaded_model.encode(title)
