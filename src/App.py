@@ -4,15 +4,10 @@ from pickle import GET
 import flask
 from requests import request
 from sklearn.svm import SVC
-# from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
-
-# @app.route('/',methods= ['GET','POST'])
-# def helloworld():
-#     return render_template('index.html')
-
 
 #filename = '/Users/VKANAMA/Downloads/deep_model.sav'
 if not os.path.exists(filename):
