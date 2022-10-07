@@ -1,0 +1,64 @@
+<!---Thanks to undraw-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Detection</title>
+    <link rel='stylesheet' type='text/css' href='{{ url_for("static", filename="style.css") }} '/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <header>
+    <h2>Flood Detection from Social Media Text </h2>
+  </header>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src='{{url_for("static",filename="./base.jpeg")}}' type="text/css"/>
+      </div>
+      <div class="login-container">
+        <form action="{{ url_for('Home')}}" method="post">
+          <h3>Welcome {{usrname}}</h3>
+          <h4>Enter Login Details</h4>
+          <div class="input-div" one>
+            <div class="i">
+              <i class="fas fa-id-badge" ></i>
+            </div>
+            <div>
+              <h5>UserName</h5>
+              <input class = input type="text" id="user" name="user" >
+                
+            </div>
+          </div>
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-user-lock"></i>
+            </div>
+            <div>
+              <h5>Password</h5>
+                <input class = input type="password" id="pass" name="pass">
+                
+            </div>
+          </div>
+          <button class = button type="submit"  href = "{{ url_for('Home')}}" >Login</button>
+          
+          <button class = button type="submit"  href = "{{ url_for('Home')}}" >Back</button>
+          
+          <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button twitter" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button instagram" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button pinterest" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button google-plus" href="{{ url_for('login_socialmedia')}}"></a>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src='{{ url_for("static",filename="./main.js") }}'></script>
+  </body>
+  <footer>
+    Copyright © 2022 - All rights Reserved - Designed by SE-Team11
+  </footer>
+</html>
