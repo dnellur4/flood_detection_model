@@ -1,5 +1,5 @@
 from webapp import client
-class test_predic_page():
+class test_login_page():
     def test_predict(self,client):
         landing = client.get("/login_socialmedia")
         html = landing.data.decode()
