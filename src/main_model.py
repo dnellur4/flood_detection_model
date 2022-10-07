@@ -24,12 +24,12 @@ class prediction():
 
         result = svm_model.predict([input_list])
 
-    if result[0] == 1:
-        return(1)
-        print('The post signifies flood')
-    else:
-        return(0)
-        print('The post does not signify a flood')
+        if result[0] == 1:
+            return(1)
+            print('The post signifies flood')
+        else:
+            return(0)
+            print('The post does not signify a flood')
         
 def main():
     #Take inputs
