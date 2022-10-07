@@ -1,5 +1,7 @@
-<p align="center"><img src="/header.png"></p>
 
+<h1 align="center"> Group-15 </h1>
+
+<p align="center"><img src="/header.png"></p>
 <h1 align="center"> Flood detection from social media text </h1>
 
 <div align="center">
@@ -47,18 +49,23 @@
 
 ## Overview
 
-Social media has emerged as a source of quick communication and information. This can be used as an information source for natural disaster detection and assessment. However, using social media for disaster assessment is difficult due to the lack of trustworthiness brought on by anonymity and uncertainty. Many methods, including the use of textual and visual features, have been tested to enhance the detection of natural disasters in social media posts. The results demonstrate that the  features have a positive impact on distinguishing flood texts. From metadata, we considered only the textual metadata.
-
+   <p> Social media has emerged as a source of quick communication and information. This can be used as an information source for natural disaster detection and assessment. However, using social media for disaster assessment is difficult due to the lack of trustworthiness brought on by anonymity and uncertainty.</p>
+    <p>Many methods, including the use of textual and visual features, have been tested to enhance the detection of natural disasters in social media posts. The results demonstrate that the  features have a positive impact on distinguishing flood texts. From metadata, we considered only the textual metadata.</p>
+    
 ## Description
-
-Nowadays, a significant number of individuals use cellphones and write about their daily lives on social media.  The analysis of this immense amount of social media data has the potential to significantly improve response times in the event of a natural disaster. The project's objective is to identify floods from a given text which is associated social media metadata. We intend to put into practice a model for flood detection that makes use of the metadata. In order to create an effective model as part of the fusion, we would like to investigate various 12 Natural Language Processing techniques for feature extraction from the social media information.
+   <p>Recently, a significant number of individuals use cellphones and write about their daily lives on social media.  The analysis of this immense amount    of social media data has the potential to significantly improve response times in the event of a natural disaster.</p>
+  <p>The project's objective is to identify floods from a given text which is associated social media metadata. We intend to put into practice a model for    flood detection that makes use of the metadata.</p>
+  <p>In order to create an effective model as part of the fusion, we would like to investigate various 12 Natural Language Processing techniques for    c.    feature extraction from the social media information.</p>
 
 ## Directory Structure 
-
 ```txt
 .github/workflows/
    python-app.yml
    pdoc-app.yml
+docs/
+  src
+  proj1rubricComments.pdf
+  proj1rubric.md
 src/
   README.md
   static/
@@ -75,16 +82,17 @@ src/
   Main_model.py
   bert+svm_flood_detection.ipynb
   training_model.py
-  __init__.py
-docs/
-  proj1rubricComments.pdf
-  proj1rubric.md
 test/
-  README.md
-  test_model.py
-  Home.png
-  login.png
-  output_prediction.png
+  test_sample.py
+  Web Results/
+      Home.png
+      login.png
+      output_prediction.png
+  unit/webapp/
+      __init__.py
+      test_index.py
+      test_login.py
+      test_predict.py
 .gitignore
 .travis.yml
 CITATION.md 
@@ -146,11 +154,9 @@ setup.py
   - We trained our model using BERT + SVM machinelearning model.
   - Depending on the inputs our trained machine learning model predicts the outcome whether the flood exists or not.
 ## Future scope
-  - This application can be used as an extension to a social media app.
-  - Predicting the flood using  current text analysis can be extended to images in the social media posts.
-  - As the trained data is limited in our application. It can be improved by building the model with more data.
-
-
+  - Moreover, due to advancement of social media, users now can write in these social media using their native language. So, an can extension to a social media app will be of good use.
+  - Our current model predicts the flood using  current text analysis, including the images along with the text could improve the accuracy of the model
+  - We have a limited training data for the model in our application. It can be improved by training the model with more data.
 ## Video
 
 ## Group Members ##
