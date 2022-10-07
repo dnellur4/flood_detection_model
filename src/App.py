@@ -37,6 +37,8 @@ def Home():
 @flask_app.route("/predict", methods = ['POST','GET'])
 def predict():
     #loading the tokenizer
+    res = ''
+    description=''
     if flask.request.method == 'POST':
         ptext= flask.request.form.get('post_text')
         print(ptext)
