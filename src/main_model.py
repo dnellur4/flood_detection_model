@@ -4,34 +4,34 @@ import pickle
 import os
 import argparse
 
+class prediction():
+    def predict_flood(self, description, title):
+        #loading the tokenizer
+        filename = 'deep_model.sav'
+        if not os.path.exists(filename):
+            os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
+        loaded_model = pickle.load(open(filename, 'rb'))
 
-def predict_flood(description, title):
-    #loading the tokenizer
-    filename = 'deep_model.sav'
-    if not os.path.exists(filename):
-        os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
-    loaded_model = pickle.load(open(filename, 'rb'))
+        #loading the model
+        filename = 'svm_model.sav'
+        if not os.path.exists(filename):
+            os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
+        svm_model = pickle.load(open(filename, 'rb'))
 
-    #loading the model
-    filename = 'svm_model.sav'
-    if not os.path.exists(filename):
-        os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
-    svm_model = pickle.load(open(filename, 'rb'))
+        input_txt = loaded_model.encode(description)
+        input_title = loaded_model.encode(title)
+        input_list = input_txt.tolist() + input_title.tolist()
 
-    input_txt = loaded_model.encode(description)
-    input_title = loaded_model.encode(title)
-    input_list = input_txt.tolist() + input_title.tolist()
+        result = svm_model.predict([input_list])
 
-    result = svm_model.predict([input_list])
-
-    if result[0] == 1:
-        return(1)
-        print('The post signifies flood')
-    else:
-        return(0)
-        print('The post does not signify a flood')
- 
-if __name__ == '__main__':
+        if result[0] == 1:
+            return(1)
+            print('The post signifies flood')
+        else:
+            return(0)
+            print('The post does not signify a flood')
+        
+def main():
     #Take inputs
     parser = argparse.ArgumentParser(description='Flood detection')
 
@@ -42,6 +42,10 @@ if __name__ == '__main__':
 
     description = args.description
     title = args.title
+    return(description,title)
 
-    out = predict_flood(description, title)
+if __name__ == '__main__':
+    p = prediction()
+    description, title = main()
+    out = p.predict_flood(description, title)
     
