@@ -9,22 +9,20 @@ import pickle
 import os
 import argparse
 
-#filename = '/Users/VKANAMA/Downloads/deep_model.sav'
-filename = 'deep_model.sav'
-if not os.path.exists(filename):
-    print(1)
-    os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
-loaded_model = pickle.load(open(filename, 'rb'))
+def get_model():
+    filename = 'deep_model.sav'
+    if not os.path.exists(filename):
+        os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
+    loaded_model = pickle.load(open(filename, 'rb'))
 
-#loading the model
-#filename = '/Users/VKANAMA/Downloads/svm_model.sav'
-filename = 'svm_model.sav'
-if not os.path.exists(filename):
-    os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
-svm_model = pickle.load(open(filename, 'rb'))
+    #loading the model
+    filename = 'svm_model.sav'
+    if not os.path.exists(filename):
+        os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
+    svm_model = pickle.load(open(filename, 'rb'))
+    return loaded_model,svm_model
 
 flask_app = flask.Flask(__name__)
-
 @flask_app.route("/",methods = ['POST','GET'])
 def Home():
     try:
@@ -33,7 +31,7 @@ def Home():
     except:
         return flask.render_template("index.html")
 
-
+loaded_model,svm_model = get_model()
 @flask_app.route("/predict", methods = ['POST','GET'])
 def predict():
     #loading the tokenizer
@@ -64,8 +62,11 @@ def predict():
 def login_socialmedia():
     return flask.render_template("login_socialmedia.html")
 
+def run_app():
+    flask_app.run(port =3000, debug =True)
+    
 def return_app():
     return(flask_app)
 
 if __name__ == '__main__':
-    flask_app.run(port =3000, debug =True)
+    run_app()
