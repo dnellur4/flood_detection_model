@@ -1,4 +1,4 @@
-from test.unit.webapp import client
+from webapp import client
 def test_predict(client):
     landing = client.get("/predict")
     html = landing.data.decode()
