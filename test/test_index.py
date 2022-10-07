@@ -1,4 +1,4 @@
-from webapp import client
+import client
 
 def test_landing(client):
     landing = client.get("/")
