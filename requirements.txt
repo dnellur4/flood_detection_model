@@ -76,8 +76,3 @@ urllib3==1.26.12
 validators==0.20.0
 Werkzeug==2.2.2
 zipp==3.8.1
-gdown==4.4.0
-requests==2.23.0
-sentence_transformers==2.2.2
-session_info==1.0.0
-scikit_learn==1.0.2
