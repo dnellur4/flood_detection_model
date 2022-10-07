@@ -62,5 +62,8 @@ def predict():
 def login_socialmedia():
     return flask.render_template("login_socialmedia.html")
 
+def return_app():
+    return(flask_app)
+
 if __name__ == '__main__':
     flask_app.run(port =3000, debug =True)
