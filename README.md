@@ -96,6 +96,9 @@ requirements.txt
 setup.py         
 ```
 ## Technologies
+
+![Jupyter notebook](https://img.shields.io/badge/jupyternotebook-%2320232a.svg?style=for-the-badge&logo=jupyternotebook&logoColor=%2361DAFB) &nbsp; ![Python](https://img.shields.io/badge/python-%2320232a.svg?style=for-the-badge&logo=python&logoColor=%2361DAFB) &nbsp; ![HTML](https://img.shields.io/badge/html-%2320232a.svg?style=for-the-badge&logo=html&logoColor=%2361DAFB) &nbsp; ![CSS](https://img.shields.io/badge/css-%2320232a.svg?style=for-the-badge&logo=css&logoColor=%2361DAFB) &nbsp; ![Javascript](https://img.shields.io/badge/javascript-%2320232a.svg?style=for-the-badge&logo=javascript&logoColor=%2361DAFB) 
+
 ## Software requirement
 ## Instructions to execute
 ## Results
