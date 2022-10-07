@@ -50,7 +50,12 @@
 </p>
 
 ## Overview
+
+Social media has emerged as a source of quick communication and information. This can be used as an information source for natural disaster detection and assessment. However, using social media for disaster assessment is difficult due to the lack of trustworthiness brought on by anonymity and uncertainty. Many methods, including the use of textual and visual features, have been tested to enhance the detection of natural disasters in social media posts. The results demonstrate that the  features have a positive impact on distinguishing flood texts. From metadata, we considered only the textual metadata.
+
 ## Description
+
+
 ## Features
 ## Directory Structure 
 
@@ -104,6 +109,9 @@ setup.py
 ## Results
 ## Conclusion
 ## Future scope
+
+
+
 ## Video Link
 ## Group Members ##
   - [Nelluru, Dedeepya](mailto:dnellur@ncsu.edu?) (dnellur)
