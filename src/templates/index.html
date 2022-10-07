@@ -1,0 +1,60 @@
+<!---Thanks to undraw-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Detection</title>
+    <link rel='stylesheet' type='text/css' href='{{ url_for("static", filename="style.css") }} '/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <header>
+    <h2>Flood Detection from Social Media Text </h2>
+  </header>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src='{{url_for("static",filename="./base.jpeg")}}' type="text/css"/>
+      </div>
+      <div class="login-container">
+        <form action="{{ url_for('predict')}}" method="post">
+          <h4>Enter Prediction Input </h4>
+          <div class="input-div" one>
+            <div class="i">
+              <i class="fas fa-water" ></i>
+            </div>
+            <div>
+              <h5>Webpage Title</h5>
+              <input class = input type="text" id="Web title" name="post_text" >
+                
+            </div>
+          </div>
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-comment"></i>
+            </div>
+            <div>
+              <h5>Description</h5>
+                <input class = input stype="text" id="desc" name="desc">
+                
+            </div>
+          </div>
+          <button class = button type="submit"  href = "{{ url_for('predict')}}" >Predict</button>
+          <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button twitter" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button instagram" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button pinterest" href="{{ url_for('login_socialmedia')}}"></a>
+          <a class="social-button google-plus" href="{{ url_for('login_socialmedia')}}"></a>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src='{{ url_for("static",filename="./main.js") }}'></script>
+  </body>
+  <footer>
+    Copyright © 2022 - All rights Reserved - Designed by SE-Team11
+  </footer>
+</html>
