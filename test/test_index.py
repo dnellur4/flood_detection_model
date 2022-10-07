@@ -1,4 +1,4 @@
-import client
+from test import client
 
 def test_landing(client):
     landing = client.get("/")
