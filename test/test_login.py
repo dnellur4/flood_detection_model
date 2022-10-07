@@ -1,4 +1,4 @@
-from webapp import client
+import client
 def test_predict(client):
     landing = client.get("/login_socialmedia")
     html = landing.data.decode()
