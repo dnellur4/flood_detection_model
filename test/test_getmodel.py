@@ -1,6 +1,7 @@
 import pytest
-from src.App import * 
-from src.main_model import *
+from src import App
+from src import main_model
+
 class test_getmodel:
   def test_get_model_app(self):
       return App.get_model()
