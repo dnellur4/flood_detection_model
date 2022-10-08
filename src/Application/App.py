@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
-from src.Application.modelprediction import ModelPrediction
+import modelprediction
 
 flask_app = flask.Flask(__name__)
 def run_app():
@@ -30,7 +30,7 @@ def predict():
             #loading the tokenizer
             res = ''
             description=''
-            mp = ModelPrediction()
+            mp = modelprediction.ModelPrediction()
             if flask.request.method == 'POST':
                 ptext= flask.request.form.get('post_text')
                 print(ptext)
