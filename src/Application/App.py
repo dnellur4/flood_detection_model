@@ -1,5 +1,5 @@
 from pathlib import Path  # if you haven't already done so
-import system as sys
+import sys
 
 file = Path(__file__).resolve()
 parent, root = file.parent, file.parents[1]
