@@ -1,9 +1,9 @@
 import pytest
-from src import App 
+from src.App import *  
 
 @pytest.fixture
 def client():
-    flask_app = App.return_app()
+    flask_app = return_app()
     flask_app.config['TESTING'] = True
     client = flask_app.test_client()
 
