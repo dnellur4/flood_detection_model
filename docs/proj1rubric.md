@@ -5,11 +5,11 @@ Total Score:
 |Video1|  | N/A | 
 |Video2| 3 |  | 
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others, but nevertheless, here is a track record that everyone is contributing a lot)| 3 | GH Insights |
-|Number of commits| 3 | GH Insights |
-|Number of commits: by different people| 3 | GH Insights |
-|Issues reports: there are **many**| 3 | Issues Tab |
-|Issues are being closed| 3 | GH Insights |
-|DOI badge: exists| 3 | README.md |
+|Number of commits| 3 | GH Insights [contributors](https://github.com/dnellur4/flood_detection_model/graphs/contributors)|
+|Number of commits: by different people| 3 | GH Insights [commits](https://github.com/dnellur4/flood_detection_model/graphs/commit-activity) |
+|Issues reports: there are **many**| 3 | Issues Tab [Open issues](https://github.com/dnellur4/flood_detection_model/issues?q=is%3Aissue+is%3Aopen)|
+|Issues are being closed| 3 | Issues Tab [Closed issues](https://github.com/dnellur4/flood_detection_model/issues?q=is%3Aissue+is%3Aclosed)|
+|DOI badge: exists| 3 | README.md [Zenodo](https://zenodo.org/record/7158368#.Y0Cd-OzMK3I)|
 |Docs: doco generated, format not ugly |  |  |
 |Docs: what: point descriptions of each class/function (in isolation) |  |  
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|  |  |
