@@ -21,17 +21,6 @@ class ModelPrediction():
             os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
         svm_model = pickle.load(open(filename, 'rb'))
         
-        #filename = '/Users/VKANAMA/Downloads/deep_model.sav'
-        '''if not os.path.exists(filename):
-            print(1)
-            os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")'''
-        #loaded_model = pickle.load(open(filename, 'rb'))
-
-        #loading the model
-        #filename = '/Users/VKANAMA/Downloads/svm_model.sav'
-        '''if not os.path.exists(filename):
-            os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")'''
-        
         self.svm_model = pickle.load(open(filename, 'rb'))
         return loaded_model,self.svm_model
 
