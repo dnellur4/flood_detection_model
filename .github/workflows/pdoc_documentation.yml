@@ -42,7 +42,7 @@ jobs:
       - name: Generating Documentation
         run: |
           pip install pdoc
-          python -m pdoc ./src/* -o ./docs/src
+          python -m pdoc ./src/App.py -o ./docs/src
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Deploy to GitHub Pages
