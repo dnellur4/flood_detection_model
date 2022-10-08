@@ -1,3 +1,15 @@
+from pathlib import Path  # if you haven't already done so
+
+file = Path(_file_).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+# Additionally remove the current file's directory from sys.path
+try:
+    sys.path.remove(str(parent))
+except ValueError:  # Already removed
+    pass
+
 from cgitb import text
 from imp import load_module
 from pickle import GET
@@ -8,7 +20,7 @@ from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
-from Application import modelprediction
+from src.Application.modelprediction import ModelPrediction
 
 flask_app = flask.Flask(__name__)
 def run_app():
@@ -30,7 +42,7 @@ def predict():
             #loading the tokenizer
             res = ''
             description=''
-            mp = modelprediction.ModelPrediction()
+            mp = ModelPrediction()
             if flask.request.method == 'POST':
                 ptext= flask.request.form.get('post_text')
                 print(ptext)
