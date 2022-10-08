@@ -5,7 +5,13 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - Ratan
+      - Ravi_teja
+      - sai_kumar
+      - vardhani
+      - dedeepya
   pull_request:
     branches: [ "main" ]
 
@@ -37,3 +43,9 @@ jobs:
     - name: Test with pytest
       run: |
         python3 -m pytest
+    - name: Generate coverage Report
+      run: |
+        pip install coverage
+        coverage run -m pytest
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2
