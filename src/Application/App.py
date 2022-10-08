@@ -1,3 +1,16 @@
+from pathlib import Path  # if you haven't already done so
+import sys
+
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
+# Additionally remove the current file's directory from sys.path
+try:
+    sys.path.remove(str(parent))
+except ValueError:  # Already removed
+    pass
+
 from cgitb import text
 from imp import load_module
 from pickle import GET
@@ -8,7 +21,7 @@ from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
-from Application.modelprediction import ModelPrediction
+from src.Application.modelprediction import ModelPrediction
 
 flask_app = flask.Flask(__name__)
 def run_app():

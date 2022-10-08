@@ -1,5 +1,5 @@
 import pytest
-from Application import App
+from src.Application import App
 import flask
 
 class test_app:
