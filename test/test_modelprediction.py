@@ -1,5 +1,5 @@
 import pytest
-from Application.modelprediction import ModelPrediction
+from scr.Application.modelprediction import ModelPrediction
 import flask
 
 class testModelPrediction:
