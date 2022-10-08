@@ -43,9 +43,14 @@ jobs:
       - name: Generating Documentation
         run: |
           pip install pdoc
-          python -m pdoc ./src/* -o ./docs/src
+          python -m pdoc ./src/Application/*.py -o ./docs/src
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: './docs/src'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
