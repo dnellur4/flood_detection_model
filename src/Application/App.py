@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 import pickle
 import os
 import argparse
-from Application.modelprediction import ModelPrediction
+from modelprediction import ModelPrediction
 
 flask_app = flask.Flask(__name__)
 def run_app():
