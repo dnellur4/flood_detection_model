@@ -4,6 +4,7 @@ import pickle
 import os
 import argparse
 
+
 class ModelPrediction():
     def __init__(self) -> None:
         svm_model = None
