@@ -10,18 +10,22 @@ class ModelPrediction():
         svm_model = None
 
     def get_model(self):
-        filename = 'deep_model.sav'
-        if not os.path.exists(filename):
-            os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
-        loaded_model = pickle.load(open(filename, 'rb'))
-
-        #loading the model
-        filename = 'svm_model.sav'
-        if not os.path.exists(filename):
-            os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
-        svm_model = pickle.load(open(filename, 'rb'))
-        
-        self.svm_model = pickle.load(open(filename, 'rb'))
+        try:
+            filename = 'deep_model.sav'
+            if not os.path.exists(filename):
+                os.system("gdown 1Vd1TV-MFHqC4IWbJCGcmKreCf5Jx_au_")
+            loaded_model = pickle.load(open(filename, 'rb'))
+        except:
+            print("file deep_model.sav not getting loaded")
+        try:
+            #loading the model
+            filename = 'svm_model.sav'
+            if not os.path.exists(filename):
+                os.system("gdown  1lg3_Ni8r5p1CK9W3DAPsJuM1lyNt8U4a")
+            self.svm_model = pickle.load(open(filename, 'rb'))
+        except:
+            print("file svm_model.sav not getting loaded")
+            
         return loaded_model,self.svm_model
 
     def get_predictions(self,input_list):
