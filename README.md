@@ -55,7 +55,7 @@
 ## Description
    <p>Recently, a significant number of individuals use cellphones and write about their daily lives on social media.  The analysis of this immense amount    of social media data has the potential to significantly improve response times in the event of a natural disaster.</p>
   <p>The project's objective is to identify floods from a given text which is associated social media metadata. We intend to put into practice a model for    flood detection that makes use of the metadata.</p>
-  <p>In order to create an effective model as part of the fusion, we would like to investigate various 12 Natural Language Processing techniques for    c.    feature extraction from the social media information.</p>
+  <p>In order to create an effective model as part of the fusion, we would like to investigate various 12 Natural Language Processing techniques for   feature extraction from the social media information.</p>
 
 ## Directory Structure 
 ```txt
@@ -68,31 +68,35 @@ docs/
   proj1rubric.md
 src/
   README.md
-  static/
-      base.jpeg
-      water.jpeg
-      main.js
-      style.css
-  templates/
-      index.html
-      login_socialmedia.html
-      predict.html
-  App.py
-  app.yaml
-  Main_model.py
-  bert+svm_flood_detection.ipynb
-  training_model.py
+  Application/
+      static/
+          base.jpeg
+          water.jpeg
+          main.js
+          style.css
+      templates/
+          index.html
+          login_socialmedia.html
+          predict.html
+      App.py
+      app.yaml
+      model_prediction.py
+  Training/
+      bert+svm_flood_detection.ipynb
+      training_model.py
 test/
-  test_sample.py
+  README.md
   Web Results/
       Home.png
       login.png
       output_prediction.png
-  unit/webapp/
-      __init__.py
-      test_index.py
-      test_login.py
-      test_predict.py
+  __init__.py
+  test_index.py
+  test_login.py
+  test_modelprediction.py
+  test_predict.py
+  test_return.py
+  test_runner.py
 .gitignore
 .travis.yml
 CITATION.md 
@@ -154,7 +158,7 @@ setup.py
   - We trained our model using BERT + SVM machinelearning model.
   - Depending on the inputs our trained machine learning model predicts the outcome whether the flood exists or not.
 ## Future scope
-  - Moreover, due to advancement of social media, users now can write in these social media using their native language. So, an can extension to a social media app will be of good use.
+  - Moreover, due to advancement of social media, users now can write in these social media using their native language. So, an extension to a social media app will be of good use.
   - Our current model predicts the flood using  current text analysis, including the images along with the text could improve the accuracy of the model
   - We have a limited training data for the model in our application. It can be improved by training the model with more data.
 ## Video
