@@ -142,7 +142,7 @@ setup.py
 
      - Clone [Flooddetection github repo](https://github.com/dnellur4/flood_detection_model).
 
-     - Navigate to [project directory](./).
+     - Navigate to project directory.
   
      - Run `python3 App.py`
 
@@ -162,6 +162,8 @@ setup.py
   - Our current model predicts the flood using  current text analysis, including the images along with the text could improve the accuracy of the model
   - We have a limited training data for the model in our application. It can be improved by training the model with more data.
 ## Video
+
+https://user-images.githubusercontent.com/112122632/194800209-9f043016-e6d9-46b4-8e7b-f90fd7e6b64a.mp4
 
 ## Group Members ##
   - [Nelluru, Dedeepya](mailto:dnellur@ncsu.edu?) (dnellur)
