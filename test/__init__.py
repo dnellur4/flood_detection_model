@@ -1,5 +1,6 @@
 import pytest
-from src.Application.App import *  
+from src.Application.App import *
+
 
 @pytest.fixture
 def client():
@@ -8,6 +9,7 @@ def client():
     client = flask_app.test_client()
 
     yield client
+
 
 @pytest.fixture()
 def runner(flask_app):
